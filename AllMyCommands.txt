@@ -1,0 +1,21 @@
+git init
+git add AboutVersionControl.docx
+git add BranchesInNutshell.docx
+git add DisturbedWorkflows.docx
+git commit -m "added three files"
+git rm -f "BranchesInNutshell.docx"
+git commit -m "deleted file"
+git revert HEAD
+git remote add origin https://github.com/Mariamelziady/SE.git
+git push -u origin master
+echo "# SE" >>README.md
+git branch ReadMe
+git checkout ReadMe
+git add README.md
+git commit -m "added README.md file to ReadMe branch"
+git push -u origin ReadMe
+git checkout master
+git merge ReadMe
+git add AllMyCommand.txt
+git commit -m "adding AllMyCommands file"
+git push -u origin master
